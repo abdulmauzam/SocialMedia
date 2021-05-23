@@ -12,7 +12,7 @@ import {
   makeStyles,
   Input,
 } from "@material-ui/core";
-import HomeIcon from '@material-ui/icons/Home';
+import HomeIcon from "@material-ui/icons/Home";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -24,7 +24,6 @@ import {
   Button,
   Checkbox,
   Grid,
-  
   Card,
   CardContent,
 } from "@material-ui/core";
@@ -44,6 +43,12 @@ const NavBar = (props) => {
     props.setUserState();
     setAnchorEl(null);
   };
+  const onChange=(e)=>{
+    let files= e.target.files;
+    let reader =new FileReader()
+    reader.readAsDataURL(files[0])
+    console.log(reader)
+  }
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -55,29 +60,24 @@ const NavBar = (props) => {
           <Typography variant="h6" className={classes.title}>
             Welcome to Social Media Handler
           </Typography>
-          
-            <div>
-            
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                
-                color="inherit"
-              ><Link to="/dashboard">
-              <HomeIcon/></Link>
-              
-                              </IconButton>
-                              
-              
-            </div>
-          
+
+          <div>
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <Link to="/dashboard">
+                <HomeIcon />
+              </Link>
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <h2>Create your own post</h2>
       <Container component="main" width="90px" className="b">
-        <Card className="card" style={{minHeight:"350px"}} >
-        
+        <Card className="card" style={{ minHeight: "350px" }}>
           <textarea
             required
             rows="8"
@@ -87,19 +87,25 @@ const NavBar = (props) => {
           />
           <br />
           <br />
-          <div className="flexbox"><label>Select date</label>
-        <DatePicker
-                
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-        />
-        <label className="label">Select Time</label>
-        <TimePicker
-          className="time"
-          selected={time}
-          onChange={(time) => setTime(time)}
-        /></div>
-          <Button className="createPostButton" style={{marginTop:"20px"}}> Save</Button>
+          <div className="flexbox">
+            <label>Select date</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+            />
+            <label className="label">Select Time</label>
+            <TimePicker
+              className="time"
+            
+              selected={time}
+              onChange={(time) => setTime(time)}
+            />
+          </div>
+          <input style={{marginTop:"20px"}} type="file" name="file" onChange={onChange}/>
+          <Button className="createPostButton" style={{ marginTop: "20px" }}>
+            {" "}
+            Save
+          </Button>
         </Card>
       </Container>
     </div>
