@@ -7,10 +7,9 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Menu,
-  MenuItem,
+  
   makeStyles,
-  Input,
+  
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 
@@ -18,31 +17,23 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import {
   Container,
-  CssBaseline,
-  Avatar,
-  FormControlLabel,
+  
   Button,
-  Checkbox,
-  Grid,
+  
   Card,
-  CardContent,
+ 
 } from "@material-ui/core";
 
 const NavBar = (props) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const [startDate, setStartDate] = useState(new Date());
-  const [post, setPost] = useState("");
+ 
+
+
+  
   const [time, setTime] = useState("null");
 
-  const handleClose = () => {
-    localStorage.removeItem("user");
-    props.setUserState();
-    setAnchorEl(null);
-  };
+ 
   const onChange=(e)=>{
     let files= e.target.files;
     let reader =new FileReader()
@@ -50,9 +41,7 @@ const NavBar = (props) => {
     console.log(reader)
   }
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.menubackgroud}>

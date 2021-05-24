@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+
 import { AuthProvider } from "../contexts/AuthContext";
 import Signup from "./Signup";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -8,7 +8,7 @@ import Login from "./Login";
 import Reset from "./Reset";
 import ConnectProfile from "./ConnectProfile"
 import "./App.css";
-import Background from "./images/dubai.jpg";
+
 import Calendar from "./Calendar";
 import Try from "./try";
 import CreatePost from "./CreatePost";

@@ -17,7 +17,7 @@ function Tryapp() {
     console.log(num.length)
     return (
         <div>
-        <Button onClick={addNum}> add me</Button>
+        <Button onClick={()=> window.open("https://github.com/abdulmauzam/SocialMedia")}> add me</Button>
         <Form onSubmit={addNum}>
         <Form.Group id="title">
                   <Form.Label>title</Form.Label>

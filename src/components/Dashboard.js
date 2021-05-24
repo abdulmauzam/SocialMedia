@@ -1,7 +1,7 @@
 import React from "react";
 import wisdom from "./images/wisdom.JPG";
 import "./App.css";
-import { Card, Button, Form, Alert, Container } from "react-bootstrap";
+import { Card, Button , Container } from "react-bootstrap";
 import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
 import { FaThumbtack } from "@react-icons/all-files/fa/FaThumbtack";
 import { BiCalendar } from "@react-icons/all-files/bi/BiCalendar";
@@ -11,10 +11,9 @@ import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  IconButton,
+
   Typography,
-  Menu,
-  MenuItem,
+ 
   makeStyles,
 } from "@material-ui/core";
 
