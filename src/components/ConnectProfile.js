@@ -4,11 +4,20 @@ import { AiFillFacebook } from "@react-icons/all-files/ai/AiFillFacebook";
 import { AiFillTwitterSquare } from "@react-icons/all-files/ai/AiFillTwitterSquare";
 import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram";
 import "./App.css";
+import palm from "./images/palmjumeirah.jpg"
 
+var sectionStyle = {
+  width: "100vw",
+  height: "100vh",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundImage: "url(" + palm+ ")",
+};
 export default function ConnectProfile() {
   return (
+    <section style={sectionStyle}>
     <>
-      <h2 className="text"> Open Social media Accounts</h2>
+      <h2 className="text"> Open a profile</h2>
       <Card
         style={{
           height: "12rem",
@@ -63,5 +72,6 @@ export default function ConnectProfile() {
         </div>
       </Card>
     </>
+    </section>
   );
 }
