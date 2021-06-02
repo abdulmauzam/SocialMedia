@@ -13,7 +13,7 @@ export default function MainPost() {
   const addNote = () => {
     const newDraft = {
       id: uuid(),
-      body: "asdfasdfadfasd",
+      body: "",
       date:"",
       time:"",
      image: tanjiro,
