@@ -1,21 +1,14 @@
 import React from "react";
 import wisdom from "./images/wisdom.JPG";
 import "./App.css";
-import { Card, Button , Container } from "react-bootstrap";
+import { Card, Button, Container } from "react-bootstrap";
 import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
 import { FaThumbtack } from "@react-icons/all-files/fa/FaThumbtack";
 import { BiCalendar } from "@react-icons/all-files/bi/BiCalendar";
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle";
 import { FaThumbsUp } from "@react-icons/all-files/fa/FaThumbsUp";
 import { Link } from "react-router-dom";
-import {
-  AppBar,
-  Toolbar,
-
-  Typography,
- 
-  makeStyles,
-} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
 
 export default function Dashboard() {
   const useStyles = makeStyles((theme) => ({
@@ -59,7 +52,9 @@ export default function Dashboard() {
             <Button className="buttonDash">Home Page</Button>
             <Button className="buttonDash">Publishing</Button>
             <Button className="buttonDash">Inbox</Button>
-            <Button className="buttonDash">Notes</Button>
+            <Link to="/notes/main">
+              <Button className="buttonDash">Notes</Button>
+            </Link>
             <Button className="buttonDash">Content Library</Button>
             <Button className="buttonDash"> Report & Dashboard</Button>
             <Link to="/">
@@ -109,7 +104,7 @@ export default function Dashboard() {
 
                   <Link to="/calendar">
                     <Button className="cardButton">View Calender</Button>
-                  </Link> 
+                  </Link>
                 </Card>
               </div>
             </Card>
@@ -127,7 +122,9 @@ export default function Dashboard() {
                       marginLeft: "83px",
                     }}
                   />
-                  <Button className="cardButton">Tasks</Button>
+                  <Link to="/notes/main">
+                    <Button className="cardButton">Tasks</Button>
+                  </Link>
                 </Card>
                 <Card
                   style={{ height: "9rem", width: "14rem", margin: "20px" }}
@@ -159,13 +156,15 @@ export default function Dashboard() {
             </Card>
           </Container>
           <div className="d-flex flex-column " style={{ marginRight: "10px" }}>
-            <Link to="/CreatePost">
+            <Link to="/CreatePosts/mainpost">
               {" "}
               <Button className="buttonDash">Compose</Button>
             </Link>
             <Button className="buttonDash">Notifications</Button>
-            <Button className="buttonDash">Tasks</Button>
-            <Button className="buttonDash">Connect a Profile</Button>
+            <Link to="/ConnectProfile">
+              <Button className="buttonDash">Connect a Profile</Button>
+            </Link>
+
             <Button className="buttonDash">Help</Button>
           </div>
         </div>

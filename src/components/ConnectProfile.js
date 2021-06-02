@@ -17,7 +17,7 @@ export default function ConnectProfile() {
   return (
     <section style={sectionStyle}>
     <>
-      <h2 className="text"> Open a profile</h2>
+      <h2 style={{textAlign:"center", color:"white"}}> Open a profile</h2>
       <Card
         style={{
           height: "12rem",
