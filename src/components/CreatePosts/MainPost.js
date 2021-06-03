@@ -1,11 +1,10 @@
-import { Filter, Notes } from "@material-ui/icons";
+
 import React, { useState } from "react";
 import uuid from "react-uuid";
 import "./apps.css";
 import Sidebar from "./SidebarPost";
 import Typebar from "./TypebarPost";
 import tanjiro from "../images/tanjiro.jpg";
-import dubai from "../images/dubai.jpg";
 
 export default function MainPost() {
   const [notes, setNotes] = useState([]);
